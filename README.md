@@ -10,8 +10,10 @@
 
 1. **默认优先**读本仓库根目录的 `latest.json`（raw 地址，不受 GitHub API 每小时 60 次的匿名限流）
 2. 清单读不到时才退回 `GET /repos/mb5958/mzt-desktop-assistant-updates/releases/latest`
-3. 比对版本；安装包优先走 `url`，失败自动切 `fallbackUrl`（API 资产端点）
-4. 流式下载 + 断点续传，用 `sha256` 校验完整性（GitHub 资产的 digest 就是它）
+3. **日常升级只下 `patches/patch-vX.Y.Z.zip`（约 2.5 MB）**：里面只有 `resources/` 目录，
+   走 raw 直连，秒级完成，也不用替换 188 MB 的 exe（不会遇到 exe 占用问题）
+4. 补丁下载失败才按 `candidates` 顺序退回完整包 / API 资产端点；
+   每个候选自带 `sha256`，流式下载 + 断点续传 + 校验
 5. 由独立升级脚本等程序退出后覆盖程序文件，失败自动回滚，然后自动重启
 
 任务配置在 `%APPDATA%\desktop-automation-assistant`，升级只覆盖程序文件，不会碰到它。
@@ -24,11 +26,19 @@ https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/late
 
 ## 发一个新版本（维护者）
 
-1. 在源码仓库改 `desktop/package.json` 的 `version`、写 `CHANGELOG.md`，重新打包出
-   `DesktopAssistant-Portable-vX.Y.Z-日期.zip`
-2. 在本仓库新建 tag `vX.Y.Z` 的 Release，把 zip 作为资产上传
-3. 更新本仓库根目录的 `latest.json`（字段见下）
-4. 各电脑启动后自动检查，或点顶栏「⬆ 检查更新」立即升级
+1. 在源码仓库改 `desktop/package.json` 的 `version`、写 `CHANGELOG.md`，打包出完整 zip
+2. 在本仓库新建 tag `vX.Y.Z` 的 Release，把完整 zip 作为资产上传（换新电脑时用）
+3. 把新包的 `resources` 目录压成 `patches/patch-vX.Y.Z.zip` 放进本仓库：
+   ```bash
+   cd win-unpacked && 7za a -tzip -mx=9 patch-vX.Y.Z.zip resources
+   ```
+   **压缩包里必须是 `resources/` 这一层**，不要多套一层目录
+4. 更新根目录 `latest.json`：把 `url` / `sha256` / `size` 指向补丁包，
+   同时把完整包的地址、大小、sha256 放进 `candidates` 作为兜底
+5. 各电脑启动后自动检查，或点顶栏「⬆ 检查更新」立即升级
+
+> 只有当 Electron 运行时本身升级（exe / dll 变化）时，才必须走完整包；
+> 平时只改界面、服务端逻辑、asar，补丁包就够了。
 
 ## latest.json 字段
 
@@ -40,11 +50,11 @@ https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/late
 | `notes` | 否 | 更新说明，显示在升级弹窗里 |
 | `publishedAt` | 否 | ISO 8601 发布时间 |
 | `releaseUrl` | 否 | 「查看发布页」按钮的链接 |
-| `url` | 是 | 安装包下载地址（必须是 https），一般填 Release 资产的 browser_download_url |
-| `fallbackUrl` | 否 | 备用下载地址，一般填 API 资产端点 `/releases/assets/{id}` |
-| `size` | 否 | 安装包字节数，用于下载进度 |
-| `sha256` | 否 | 安装包 sha256，强烈建议填，客户端会校验 |
-| `asset` | 否 | `{"name","size","sha256"}`，可覆盖上面的资产信息 |
+| `url` | 是 | **首选**安装包地址（https），一般填补丁包的 raw 地址 |
+| `mode` | 否 | `patch`（只含 resources）或 `full`（完整包） |
+| `size` / `sha256` | 否 | 首选包的大小与校验值，强烈建议填 |
+| `asset` | 否 | `{name,size,sha256,mode,url}`，可覆盖上面的资产信息 |
+| `candidates` | 否 | 备选下载列表，按顺序重试。每项 `{url,name,size,sha256,mode}`，各自带自己的校验值 |
 
 ## 注意
 
