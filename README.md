@@ -6,6 +6,19 @@
 
 当前版本：**v1.4.0**
 
+<!-- DOWNLOAD:START -->
+
+## 国内下载（推荐，v1.4.0）
+
+完整绿色版安装包：**https://www.jianguoyun.com/p/Dfuf1b4Q7uHaDhijp6sGIAA**
+
+- 版本 1.4.0，109.2 MB，sha256 `e97f0b020c5a8221f8a6b86f49627631785723e1f51c6c4bc7acd83df9a74226`
+- 国内直连，绕开 GitHub 大文件；链接绑定文件路径，每次发版覆盖同名文件，**链接固定不变、永远指向最新版**
+- 新电脑首次安装用这个；已装过程序的电脑会自动下载约 2.5 MB 的补丁包升级，无需手工下载
+- GitHub Release 备用页：https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.0
+
+<!-- DOWNLOAD:END -->
+
 ## 客户端怎么工作
 
 1. **默认优先**读本仓库根目录的 `latest.json`（raw 地址，不受 GitHub API 每小时 60 次的匿名限流）
