@@ -1,0 +1,16 @@
+{
+  "version": "1.4.0",
+  "tag": "v1.4.0",
+  "name": "MZT 桌面自动化助手 v1.4.0",
+  "notes": "## v1.4.0 — 2026-11-08\n- 新增：检查更新 / 一键自动升级（顶栏「检查更新」、版本号徽标、托盘菜单）\n- 新增：公开更新通道，源码仓库保持私有，分发版免配置即可自动更新\n- 新增：启动时自动检查、发现新版绿点提示、跳过此版本、查看发布页\n- 新增：可选「发现新版后自动下载并在空闲时升级重启」，有任务执行时等待，留 30 秒取消窗口\n- 新增：流式下载 + 断点续传 + sha256 校验（GitHub 资产 digest）\n- 新增：独立升级脚本等进程退出后覆盖文件，失败自动回滚并重启；任务配置在 %APPDATA% 不受影响\n- 新增：私有仓库只读令牌（仅存本机）与自定义清单 URL（内网 / 对象存储）\n- 说明：升级只覆盖程序文件，不会删除 rules.json / templates.json / config.json",
+  "publishedAt": "2026-11-08T09:01:14Z",
+  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.0",
+  "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.0/DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
+  "size": 114549306,
+  "sha256": "84d159e0551942d9c9c59c36e13a68af1085bd95b9bb4ad59cff189aab8ed7e6",
+  "asset": {
+    "name": "DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
+    "size": 114549306,
+    "sha256": "84d159e0551942d9c9c59c36e13a68af1085bd95b9bb4ad59cff189aab8ed7e6"
+  }
+}
