@@ -7,35 +7,35 @@
   "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.0",
   "mode": "patch",
   "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.0.zip",
-  "size": 2631541,
-  "sha256": "e3b02a8f91ee348a6b0842e7e3d10b977d18e89ea2a1dbac24ceaff93ad10c31",
+  "size": 2632198,
+  "sha256": "cbf174093f44544f5b771dca5c5c472c2d0768c6daf546ea33a7150c26393ce5",
   "asset": {
     "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.0.zip",
     "name": "patch-v1.4.0.zip",
-    "size": 2631541,
-    "sha256": "e3b02a8f91ee348a6b0842e7e3d10b977d18e89ea2a1dbac24ceaff93ad10c31",
+    "size": 2632198,
+    "sha256": "cbf174093f44544f5b771dca5c5c472c2d0768c6daf546ea33a7150c26393ce5",
     "mode": "patch"
   },
   "candidates": [
     {
       "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.0.zip",
       "name": "patch-v1.4.0.zip",
-      "size": 2631541,
-      "sha256": "e3b02a8f91ee348a6b0842e7e3d10b977d18e89ea2a1dbac24ceaff93ad10c31",
+      "size": 2632198,
+      "sha256": "cbf174093f44544f5b771dca5c5c472c2d0768c6daf546ea33a7150c26393ce5",
       "mode": "patch"
     },
     {
       "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.0/DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
       "name": "DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
-      "size": 114550411,
-      "sha256": "aef281b411673e39a2196b7425ddfe9373708e930af6aa2e9b1cf38a584678a4",
+      "size": 114551163,
+      "sha256": "7da4d691d64a7c3939f00b2a4d4b3e97a6eb22344e2046f1d174853f98549e8a",
       "mode": "full"
     },
     {
-      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/723478274",
+      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/723504325",
       "name": "DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
-      "size": 114550411,
-      "sha256": "aef281b411673e39a2196b7425ddfe9373708e930af6aa2e9b1cf38a584678a4",
+      "size": 114551163,
+      "sha256": "7da4d691d64a7c3939f00b2a4d4b3e97a6eb22344e2046f1d174853f98549e8a",
       "mode": "full"
     }
   ]
