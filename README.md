@@ -8,20 +8,19 @@
 
 ## 客户端怎么工作
 
-1. 默认读取本仓库的 `GET /repos/mb5958/mzt-desktop-assistant-updates/releases/latest`
-2. 找到其中 `DesktopAssistant-Portable-*.zip` 资产，比对 tag 与本机版本
-3. 流式下载 + 断点续传，用 GitHub 资产的 `sha256` digest 校验完整性
-4. 由独立升级脚本等程序退出后覆盖程序文件，失败自动回滚，然后自动重启
+1. **默认优先**读本仓库根目录的 `latest.json`（raw 地址，不受 GitHub API 每小时 60 次的匿名限流）
+2. 清单读不到时才退回 `GET /repos/mb5958/mzt-desktop-assistant-updates/releases/latest`
+3. 比对版本；安装包优先走 `url`，失败自动切 `fallbackUrl`（API 资产端点）
+4. 流式下载 + 断点续传，用 `sha256` 校验完整性（GitHub 资产的 digest 就是它）
+5. 由独立升级脚本等程序退出后覆盖程序文件，失败自动回滚，然后自动重启
 
 任务配置在 `%APPDATA%\desktop-automation-assistant`，升级只覆盖程序文件，不会碰到它。
 
-如果 GitHub API 被限流或访问不便，可在「更新设置 → 清单地址」里填本仓库 `latest.json` 的 raw 地址：
+清单地址可在「更新设置 → 清单地址」里改，也可以指向内网服务器 / 对象存储，完全绕开 GitHub：
 
 ```
 https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/latest.json
 ```
-
-也可以把这个文件放到内网服务器 / 对象存储上，完全绕开 GitHub。
 
 ## 发一个新版本（维护者）
 
@@ -41,7 +40,8 @@ https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/late
 | `notes` | 否 | 更新说明，显示在升级弹窗里 |
 | `publishedAt` | 否 | ISO 8601 发布时间 |
 | `releaseUrl` | 否 | 「查看发布页」按钮的链接 |
-| `url` | 是 | 安装包下载地址（必须是 https） |
+| `url` | 是 | 安装包下载地址（必须是 https），一般填 Release 资产的 browser_download_url |
+| `fallbackUrl` | 否 | 备用下载地址，一般填 API 资产端点 `/releases/assets/{id}` |
 | `size` | 否 | 安装包字节数，用于下载进度 |
 | `sha256` | 否 | 安装包 sha256，强烈建议填，客户端会校验 |
 | `asset` | 否 | `{"name","size","sha256"}`，可覆盖上面的资产信息 |
