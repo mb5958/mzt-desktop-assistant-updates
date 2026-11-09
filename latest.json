@@ -1,41 +1,41 @@
 {
-  "version": "1.4.0",
-  "tag": "v1.4.0",
-  "name": "MZT 桌面自动化助手 v1.4.0",
-  "notes": "## v1.4.0 — 2026-11-08\n- 新增：**检查更新 / 一键自动升级**。顶栏「⬆ 检查更新」、版本号徽标、托盘菜单「检查新版本」均可入口\n- 新增：**公开更新通道** [mb5958/mzt-desktop-assistant-updates](https://github.com/mb5958/mzt-desktop-assistant-updates)，源码仓库保持私有；分发给别人的程序免配置即可自动更新\n- 新增：启动时自动检查（可关）、发现新版绿点提示、跳过此版本、查看发布页\n- 新增：可选「发现新版后自动下载并在空闲时升级重启」，有任务执行时会等待，配 30 秒取消窗口\n- 新增：默认走 **raw 版本清单**（不占 GitHub API 每小时 60 次匿名额度），清单挂了自动退回 Releases API\n- 新增：日常升级只下 **约 2.5 MB 的 `resources` 增量补丁包**（走 raw 直连），补丁失败再按候选列表退回完整包 / API 资产端点；每个候选各自带 sha256\n- 新增：升级包**流式下载 + 断点续传 + sha256 校验**（用 GitHub 资产 digest），内置 7za.exe 解压\n- 新增：升级由独立 PowerShell 脚本执行——等程序退出 → 覆盖程序文件 → 失败自动回滚 → 自动重启；任务配置在 `%APPDATA%`，不会被覆盖。补丁包不碰 188MB 的 exe，也就没有 exe 占用问题\n- 新增：更新设置支持私有仓库只读 Fine-grained Token（只存本机 `update.json`，不写进安装包）与自定义清单 URL（内网 / 对象存储，可完全绕开 GitHub）\n- 版本号升至 1.4.0，升级成功后界面会提示「已成功升级到 vX.Y.Z」",
-  "publishedAt": "2026-11-08T09:01:14Z",
-  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.0",
+  "version": "1.4.1",
+  "tag": "v1.4.1",
+  "name": "MZT 桌面自动化助手 v1.4.1",
+  "notes": "## v1.4.1 — 2026-11-09\n- 新增：定时调度设置增加**开始日期**，可指定周期从任意日期起算（例：每 2 天提醒一次工作汇报，从昨天算）\n- 新增：开始日期快捷按钮「设为今天 / 设为昨天 / 清除」；执行预览、任务列表同步显示起算日\n- 修复：设了开始日期后，「每 N 天/周/月」改以该日为**第 0 天的固定锚点周期**，不再依赖上次实际执行时间；程序重启、关机、暂停、跳过周末都不会让周期漂移\n- 修复：超过 24 小时的分钟/小时间隔可用开始日期指定相位（原来固定用 2020-01-01 当基准日）\n- 说明：开始日期留空时**完全保持原有行为**，老任务不受影响；每天/每周/每月/每年只作为生效起始边界\n- 新增：界面校验开始日期合法性，且不能晚于结束日期\n- 版本号升至 1.4.1，升级成功后界面会提示「已成功升级到 vX.Y.Z」",
+  "publishedAt": "2026-11-09T08:26:23Z",
+  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.1",
   "mode": "patch",
-  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.0.zip",
-  "size": 2632198,
-  "sha256": "807b4e2384eb0e1d6857b310cc6b87cb2e52864ecd71333cfb63bc515177a820",
+  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.1.zip",
+  "size": 2634472,
+  "sha256": "2eae50eca6140de6c19f80e2cbf4c146da36a475763568ff300f55146ef9c958",
   "asset": {
-    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.0.zip",
-    "name": "patch-v1.4.0.zip",
-    "size": 2632198,
-    "sha256": "807b4e2384eb0e1d6857b310cc6b87cb2e52864ecd71333cfb63bc515177a820",
+    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.1.zip",
+    "name": "patch-v1.4.1.zip",
+    "size": 2634472,
+    "sha256": "2eae50eca6140de6c19f80e2cbf4c146da36a475763568ff300f55146ef9c958",
     "mode": "patch"
   },
   "candidates": [
     {
-      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.0.zip",
-      "name": "patch-v1.4.0.zip",
-      "size": 2632198,
-      "sha256": "807b4e2384eb0e1d6857b310cc6b87cb2e52864ecd71333cfb63bc515177a820",
+      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.1.zip",
+      "name": "patch-v1.4.1.zip",
+      "size": 2634472,
+      "sha256": "2eae50eca6140de6c19f80e2cbf4c146da36a475763568ff300f55146ef9c958",
       "mode": "patch"
     },
     {
-      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.0/DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
-      "name": "DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
-      "size": 114551162,
-      "sha256": "e97f0b020c5a8221f8a6b86f49627631785723e1f51c6c4bc7acd83df9a74226",
+      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.1/DesktopAssistant-Portable-v1.4.1-2026-11-09.zip",
+      "name": "DesktopAssistant-Portable-v1.4.1-2026-11-09.zip",
+      "size": 114553469,
+      "sha256": "aec7f60a69ae907fc4a08572b1820b3acb2dfc4d1e3245018ca9a9d26e6a86d7",
       "mode": "full"
     },
     {
-      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/723709511",
-      "name": "DesktopAssistant-Portable-v1.4.0-2026-11-08.zip",
-      "size": 114551162,
-      "sha256": "e97f0b020c5a8221f8a6b86f49627631785723e1f51c6c4bc7acd83df9a74226",
+      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/726748894",
+      "name": "DesktopAssistant-Portable-v1.4.1-2026-11-09.zip",
+      "size": 114553469,
+      "sha256": "aec7f60a69ae907fc4a08572b1820b3acb2dfc4d1e3245018ca9a9d26e6a86d7",
       "mode": "full"
     }
   ],
@@ -43,8 +43,8 @@
   "download": {
     "url": "https://www.jianguoyun.com/p/Dfuf1b4Q7uHaDhijp6sGIAA",
     "name": "DesktopAssistant-Portable.zip",
-    "size": 114551162,
-    "sha256": "e97f0b020c5a8221f8a6b86f49627631785723e1f51c6c4bc7acd83df9a74226",
+    "size": 114553469,
+    "sha256": "aec7f60a69ae907fc4a08572b1820b3acb2dfc4d1e3245018ca9a9d26e6a86d7",
     "webdav": "https://dav.jianguoyun.com/dav/mzt-dist/DesktopAssistant-Portable.zip"
   }
 }
