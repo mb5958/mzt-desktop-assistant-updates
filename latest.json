@@ -1,41 +1,41 @@
 {
-  "version": "1.4.4",
-  "tag": "v1.4.4",
-  "name": "MZT 桌面自动化助手 v1.4.4",
-  "notes": "## v1.4.4 — 2026-11-10\n- 变更：**开始日期只保留在「自定义 + 每隔 N 天 / N 周 / N 月」里**，默认留空；每天 / 每周 / 每月 / 每年、自定义的分钟 / 小时**不再有这个选项**，也没有「高级」折叠，行为与加入开始日期之前完全一致\n- 变更：留空 = 原来的算法（每跑完一次往上次数 N 天/周/月，重启或关机再开则下次到点就跑）；**填了日期才改为从那天固定推算**，该日期之前不执行\n- 变更：快捷按钮改为「设为今天 / 设为昨天 / 清空」；取消「不能留空」「默认今天」「清空自动回填今天」等强制行为\n- 修复：其它频率即使配置里残留 `startDate` 也不会再被读取——不会再出现「界面上看不见的日期悄悄拦住任务」；加载和保存时自动清理这些残留字段\n- 说明：分钟 / 小时超过 24 小时的间隔回到固定基准日（与加入开始日期之前一致）；现有两条「每 10 分钟」任务执行时刻与周期完全不变\n- 版本号升至 1.4.4",
-  "publishedAt": "2026-11-10T08:35:20Z",
-  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.4",
+  "version": "1.4.5",
+  "tag": "v1.4.5",
+  "name": "MZT 桌面自动化助手 v1.4.5",
+  "notes": "- 修复：点一次「保存配置」后仍提示「有未保存的修改」，必须再点一次才显示「已保存」——其实第一次就已经存进服务端，只是保存请求还没返回时，界面自己的状态比对抢先跑了一遍，把刚存好的任务又判成未保存\n- 修复：保存失败时不再显示「已保存」；连点多次保存也不会出现状态错乱\n- 修复：「撤销修改」后仍显示未保存；新建任务保存后「保存全部」计数不归零\n- 新增：顶栏「保存全部」按钮——显示还有几个任务没保存，一次点击存完所有有改动的任务，也可以按 Ctrl+S\n- 新增：当前任务已保存、但其他任务还有草稿时，保存条会提示「另有 N 个任务未保存」\n- 版本号升至 1.4.5",
+  "publishedAt": "2026-11-10T09:28:29Z",
+  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.5",
   "mode": "patch",
-  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.4.zip",
-  "size": 2636062,
-  "sha256": "3eb1245da5d0269ef2a4fef2fa7eaeb4908a9d95d59ae2787486649e3c8e971c",
+  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.5.zip",
+  "size": 2637813,
+  "sha256": "4e333d5132640b4dae83251ce9a6047474c87eeea799c10694895528972a818c",
   "asset": {
-    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.4.zip",
-    "name": "patch-v1.4.4.zip",
-    "size": 2636062,
-    "sha256": "3eb1245da5d0269ef2a4fef2fa7eaeb4908a9d95d59ae2787486649e3c8e971c",
+    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.5.zip",
+    "name": "patch-v1.4.5.zip",
+    "size": 2637813,
+    "sha256": "4e333d5132640b4dae83251ce9a6047474c87eeea799c10694895528972a818c",
     "mode": "patch"
   },
   "candidates": [
     {
-      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.4.zip",
-      "name": "patch-v1.4.4.zip",
-      "size": 2636062,
-      "sha256": "3eb1245da5d0269ef2a4fef2fa7eaeb4908a9d95d59ae2787486649e3c8e971c",
+      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.5.zip",
+      "name": "patch-v1.4.5.zip",
+      "size": 2637813,
+      "sha256": "4e333d5132640b4dae83251ce9a6047474c87eeea799c10694895528972a818c",
       "mode": "patch"
     },
     {
-      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.4/DesktopAssistant-Portable-v1.4.4-2026-11-10.zip",
-      "name": "DesktopAssistant-Portable-v1.4.4-2026-11-10.zip",
-      "size": 114555036,
-      "sha256": "879b22b5a08e6fe8d9735e05bb30d4853097b0ff92413689d5bac3d657b15f42",
+      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.5/DesktopAssistant-Portable-v1.4.5-2026-11-10.zip",
+      "name": "DesktopAssistant-Portable-v1.4.5-2026-11-10.zip",
+      "size": 114556864,
+      "sha256": "7eb192529c79d38de6a727841e0b1f6249d9a98136af32ade0c60b9d9d7d506c",
       "mode": "full"
     },
     {
-      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/730704351",
-      "name": "DesktopAssistant-Portable-v1.4.4-2026-11-10.zip",
-      "size": 114555036,
-      "sha256": "879b22b5a08e6fe8d9735e05bb30d4853097b0ff92413689d5bac3d657b15f42",
+      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/730848040",
+      "name": "DesktopAssistant-Portable-v1.4.5-2026-11-10.zip",
+      "size": 114556864,
+      "sha256": "7eb192529c79d38de6a727841e0b1f6249d9a98136af32ade0c60b9d9d7d506c",
       "mode": "full"
     }
   ],
@@ -43,8 +43,8 @@
   "download": {
     "url": "https://www.jianguoyun.com/p/Dfuf1b4Q7uHaDhijp6sGIAA",
     "name": "DesktopAssistant-Portable.zip",
-    "size": 114555036,
-    "sha256": "879b22b5a08e6fe8d9735e05bb30d4853097b0ff92413689d5bac3d657b15f42",
+    "size": 114556864,
+    "sha256": "7eb192529c79d38de6a727841e0b1f6249d9a98136af32ade0c60b9d9d7d506c",
     "webdav": "https://dav.jianguoyun.com/dav/mzt-dist/DesktopAssistant-Portable.zip"
   }
 }
