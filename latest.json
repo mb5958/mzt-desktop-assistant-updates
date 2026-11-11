@@ -1,41 +1,41 @@
 {
-  "version": "1.4.8",
-  "tag": "v1.4.8",
-  "name": "MZT 桌面自动化助手 v1.4.8",
-  "notes": "- 重做升级执行方式，改用程序自带的独立守护进程完成覆盖和重启，不再依赖外部脚本，企业电脑禁用脚本执行也能升级\n- 修复致命 bug：升级进程把 app.asar 当成归档包解析，读到 0 字节，复制报文件不存在，所以每次都显示在升级但版本从没变过\n- 只弹一个窗口：点一键升级并重启后直接下载并安装，不再有第二个确认框\n- 覆盖改为先写临时文件再改名替换，失败也不会破坏原来的程序\n- 重启保留原启动参数；升级没成会在启动时明确告知原因并可打开日志\n- 版本号升至 1.4.8",
-  "publishedAt": "2026-11-11T04:30:23Z",
-  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.8",
+  "version": "1.4.9",
+  "tag": "v1.4.9",
+  "name": "MZT 桌面自动化助手 v1.4.9",
+  "notes": "新增「复制为新任务」按钮：在相似任务上只改几个字时不用从头再配一遍，副本默认不启用、不带上次执行记录。",
+  "publishedAt": "2026-11-11T10:12:28Z",
+  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.9",
   "mode": "patch",
-  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.8.zip",
-  "size": 2647761,
-  "sha256": "e9e87d046237121fc243b442fa34dc97204326f81d96eb7603458c06296bb8d2",
+  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.9.zip",
+  "size": 2648251,
+  "sha256": "e05bad43d66b26a966139a2553be1be3c9431c55455a42c8007095090101cffb",
   "asset": {
-    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.8.zip",
-    "name": "patch-v1.4.8.zip",
-    "size": 2647761,
-    "sha256": "e9e87d046237121fc243b442fa34dc97204326f81d96eb7603458c06296bb8d2",
+    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.9.zip",
+    "name": "patch-v1.4.9.zip",
+    "size": 2648251,
+    "sha256": "e05bad43d66b26a966139a2553be1be3c9431c55455a42c8007095090101cffb",
     "mode": "patch"
   },
   "candidates": [
     {
-      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.8.zip",
-      "name": "patch-v1.4.8.zip",
-      "size": 2647761,
-      "sha256": "e9e87d046237121fc243b442fa34dc97204326f81d96eb7603458c06296bb8d2",
+      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.9.zip",
+      "name": "patch-v1.4.9.zip",
+      "size": 2648251,
+      "sha256": "e05bad43d66b26a966139a2553be1be3c9431c55455a42c8007095090101cffb",
       "mode": "patch"
     },
     {
-      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.8/DesktopAssistant-Portable-v1.4.8-2026-11-11.zip",
-      "name": "DesktopAssistant-Portable-v1.4.8-2026-11-11.zip",
-      "size": 114566722,
-      "sha256": "8da6668aae1aeb6b99edbb8657d3b4555a15b09567883e3ed3fc6a49a5c85606",
+      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.9/DesktopAssistant-Portable-v1.4.9-2026-11-11.zip",
+      "name": "DesktopAssistant-Portable-v1.4.9-2026-11-11.zip",
+      "size": 114567219,
+      "sha256": "e0d7f1ec589c3e282c692ac4e9b0c0b2ac4989988fe23666558cfc4b930514c2",
       "mode": "full"
     },
     {
-      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/734127627",
-      "name": "DesktopAssistant-Portable-v1.4.8-2026-11-11.zip",
-      "size": 114566722,
-      "sha256": "8da6668aae1aeb6b99edbb8657d3b4555a15b09567883e3ed3fc6a49a5c85606",
+      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/735051278",
+      "name": "DesktopAssistant-Portable-v1.4.9-2026-11-11.zip",
+      "size": 114567219,
+      "sha256": "e0d7f1ec589c3e282c692ac4e9b0c0b2ac4989988fe23666558cfc4b930514c2",
       "mode": "full"
     }
   ],
@@ -43,8 +43,8 @@
   "download": {
     "url": "https://www.jianguoyun.com/p/Dfuf1b4Q7uHaDhijp6sGIAA",
     "name": "DesktopAssistant-Portable.zip",
-    "size": 114566722,
-    "sha256": "8da6668aae1aeb6b99edbb8657d3b4555a15b09567883e3ed3fc6a49a5c85606",
+    "size": 114567219,
+    "sha256": "e0d7f1ec589c3e282c692ac4e9b0c0b2ac4989988fe23666558cfc4b930514c2",
     "webdav": "https://dav.jianguoyun.com/dav/mzt-dist/DesktopAssistant-Portable.zip"
   }
 }
