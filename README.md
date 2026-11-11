@@ -4,18 +4,18 @@
 源码放在私有仓库 `mb5958/mzt-desktop-assistant`，这里只放版本清单和绿色版安装包，
 因此分发给别的电脑时，对方不需要任何令牌或配置。
 
-当前版本：**v1.4.11**
+当前版本：**v1.4.12**
 
 <!-- DOWNLOAD:START -->
 
-## 国内下载（推荐，v1.4.11）
+## 国内下载（推荐，v1.4.12）
 
 完整绿色版安装包：**https://www.jianguoyun.com/p/Dfuf1b4Q7uHaDhijp6sGIAA**
 
-- 版本 1.4.11，109.3 MB，sha256 `bf8b7059298872be399c36ebebc4a383a8170e0ef07b1df259d5d3006e69abad`
+- 版本 1.4.12，109.3 MB，sha256 `c6d03341fb826cae9df879154880a728380c69cd7f495e39f8e6b919dd1266e6`
 - 国内直连，绕开 GitHub 大文件；链接绑定文件路径，每次发版覆盖同名文件，**链接固定不变、永远指向最新版**
 - 新电脑首次安装用这个；已装过程序的电脑会自动下载约 2.5 MB 的补丁包升级，无需手工下载
-- GitHub Release 备用页：https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.11
+- GitHub Release 备用页：https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.12
 
 <!-- DOWNLOAD:END -->
 
