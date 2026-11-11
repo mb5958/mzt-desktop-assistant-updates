@@ -1,41 +1,41 @@
 {
-  "version": "1.4.10",
-  "tag": "v1.4.10",
-  "name": "MZT 桌面自动化助手 v1.4.10",
-  "notes": "修「复制为新任务」把保存条挤窄：窗口稍小时自动换行，按钮不再被压缩。功能同 1.4.9。",
-  "publishedAt": "2026-11-11T10:19:01Z",
-  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.10",
+  "version": "1.4.11",
+  "tag": "v1.4.11",
+  "name": "MZT 桌面自动化助手 v1.4.11",
+  "notes": "升级守护进程不再覆盖自己正在运行的 DesktopAssistant.exe（Windows 不允许），改为先给自己改名 .old 再放新文件；单个文件失败不再让整次升级判死，逐个文件记账并校验 app.asar/server/html 三个关键文件；启动时自动清理 .new/.old 残留（之前会留下 188MB 垃圾）。",
+  "publishedAt": "2026-11-11T11:37:33Z",
+  "releaseUrl": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/tag/v1.4.11",
   "mode": "patch",
-  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.10.zip",
-  "size": 2648249,
-  "sha256": "e0023cb875ce353dce33b9c5e25eb9d5a12c8d76d40e9b787f49b5214fdeb623",
+  "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.11.zip",
+  "size": 2649595,
+  "sha256": "72f9e32c8f1235954b29ae20756d1e896dcf996aa61da8702944f4ed9908f222",
   "asset": {
-    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.10.zip",
-    "name": "patch-v1.4.10.zip",
-    "size": 2648249,
-    "sha256": "e0023cb875ce353dce33b9c5e25eb9d5a12c8d76d40e9b787f49b5214fdeb623",
+    "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.11.zip",
+    "name": "patch-v1.4.11.zip",
+    "size": 2649595,
+    "sha256": "72f9e32c8f1235954b29ae20756d1e896dcf996aa61da8702944f4ed9908f222",
     "mode": "patch"
   },
   "candidates": [
     {
-      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.10.zip",
-      "name": "patch-v1.4.10.zip",
-      "size": 2648249,
-      "sha256": "e0023cb875ce353dce33b9c5e25eb9d5a12c8d76d40e9b787f49b5214fdeb623",
+      "url": "https://raw.githubusercontent.com/mb5958/mzt-desktop-assistant-updates/main/patches/patch-v1.4.11.zip",
+      "name": "patch-v1.4.11.zip",
+      "size": 2649595,
+      "sha256": "72f9e32c8f1235954b29ae20756d1e896dcf996aa61da8702944f4ed9908f222",
       "mode": "patch"
     },
     {
-      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.10/DesktopAssistant-Portable-v1.4.10-2026-11-11.zip",
-      "name": "DesktopAssistant-Portable-v1.4.10-2026-11-11.zip",
-      "size": 114567219,
-      "sha256": "2c3ec27686b0fbb0479f9e8f5b37dcbd028579ec5f704444353891dfc8176f8d",
+      "url": "https://github.com/mb5958/mzt-desktop-assistant-updates/releases/download/v1.4.11/DesktopAssistant-Portable-v1.4.11-2026-11-11.zip",
+      "name": "DesktopAssistant-Portable-v1.4.11-2026-11-11.zip",
+      "size": 114568549,
+      "sha256": "bf8b7059298872be399c36ebebc4a383a8170e0ef07b1df259d5d3006e69abad",
       "mode": "full"
     },
     {
-      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/735069890",
-      "name": "DesktopAssistant-Portable-v1.4.10-2026-11-11.zip",
-      "size": 114567219,
-      "sha256": "2c3ec27686b0fbb0479f9e8f5b37dcbd028579ec5f704444353891dfc8176f8d",
+      "url": "https://api.github.com/repos/mb5958/mzt-desktop-assistant-updates/releases/assets/735301693",
+      "name": "DesktopAssistant-Portable-v1.4.11-2026-11-11.zip",
+      "size": 114568549,
+      "sha256": "bf8b7059298872be399c36ebebc4a383a8170e0ef07b1df259d5d3006e69abad",
       "mode": "full"
     }
   ],
@@ -43,8 +43,8 @@
   "download": {
     "url": "https://www.jianguoyun.com/p/Dfuf1b4Q7uHaDhijp6sGIAA",
     "name": "DesktopAssistant-Portable.zip",
-    "size": 114567219,
-    "sha256": "2c3ec27686b0fbb0479f9e8f5b37dcbd028579ec5f704444353891dfc8176f8d",
+    "size": 114568549,
+    "sha256": "bf8b7059298872be399c36ebebc4a383a8170e0ef07b1df259d5d3006e69abad",
     "webdav": "https://dav.jianguoyun.com/dav/mzt-dist/DesktopAssistant-Portable.zip"
   }
 }
